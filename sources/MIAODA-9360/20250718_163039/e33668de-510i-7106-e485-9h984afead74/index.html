@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="zh" class="no-js demo-1">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<script src="js/jquery.min.js"></script>
+		<script src="js/Helper.js"></script>
+		<script src="js/keyboard.js"></script>
+		<script src="js/const.js"></script>
+		<script src="js/level.js"></script>
+		<script src="js/crackAnimation.js"></script>
+		<script src="js/prop.js"></script>
+		<script src="js/bullet.js"></script>
+		<script src="js/tank.js"></script>
+		<script src="js/num.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/map.js"></script>
+		<script src="js/Collision.js"></script>
+		<script src="js/stage.js"></script>
+		<script src="js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<style type="text/css">
+			#canvasDiv canvas{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				border: 2px solid #333;
+				box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+			}
+
+			/* 防止空格键滚动页面 */
+			body {
+				overflow: hidden;
+			}
+
+			/* 禁用空格键的默认行为 */
+			body, html {
+				overflow: hidden;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+			}
+			
+			@keyframes fadeIn {
+			    from { opacity: 0; transform: scale(0.9); }
+			    to { opacity: 1; transform: scale(1); }
+			}
+
+			@keyframes fadeOut {
+			    from { opacity: 1; transform: scale(1); }
+			    to { opacity: 0; transform: scale(0.9); }
+			}
+
+			.fade-out {
+			    animation: fadeOut 0.5s ease-out forwards;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 坦克大战开屏广告 -->
+		<div id="splashAd" style="
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #1ABC9C 100%);
+		    z-index: 9999;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    color: white;
+		    font-family: 'Microsoft YaHei', Arial, sans-serif;
+		    animation: fadeIn 0.5s ease-in;
+		">
+		    <div style="text-align: center; max-width: 80%; padding: 20px;">
+		        <div id="adContent">
+		            <h1 style="font-size: 3em; margin-bottom: 20px; text-shadow: 3px 3px 6px rgba(0,0,0,0.7); color: #E74C3C;">
+		                🎖️ 军事模型收藏馆 🎖️
+		            </h1>
+		            <p style="font-size: 1.4em; margin-bottom: 30px; line-height: 1.6; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+		                真实还原经典战车，打造属于你的钢铁军团！<br>
+		                限量版坦克模型，军事爱好者必备收藏！
+		            </p>
+		            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap;">
+		                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; backdrop-filter: blur(10px); min-width: 150px;">
+		                    <div style="font-size: 2em; margin-bottom: 10px;">🚗</div>
+		                    <h3>T-34坦克</h3>
+		                    <p style="color: #F39C12; font-weight: bold;">1:35比例</p>
+		                </div>
+		                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; backdrop-filter: blur(10px); min-width: 150px;">
+		                    <div style="font-size: 2em; margin-bottom: 10px;">🛡️</div>
+		                    <h3>装甲车系列</h3>
+		                    <p style="color: #F39C12; font-weight: bold;">精工制作</p>
+		                </div>
+		                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; backdrop-filter: blur(10px); min-width: 150px;">
+		                    <div style="font-size: 2em; margin-bottom: 10px;">✈️</div>
+		                    <h3>战斗机模型</h3>
+		                    <p style="color: #F39C12; font-weight: bold;">可动部件</p>
+		                </div>
+		            </div>
+		            <div style="background: rgba(231,76,60,0.3); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+		                <p style="font-size: 1.1em; font-weight: bold;">🎯 战术玩家专享：购买任意坦克模型送精美军事徽章一套！</p>
+		            </div>
+		        </div>
+		        
+		        <div style="margin-top: 30px;">
+		            <button id="skipAd" style="
+		                background: #E74C3C;
+		                color: white;
+		                border: none;
+		                padding: 15px 40px;
+		                font-size: 1.2em;
+		                border-radius: 30px;
+		                cursor: pointer;
+		                transition: all 0.3s ease;
+		                box-shadow: 0 6px 20px rgba(231,76,60,0.4);
+		                font-weight: bold;
+		            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(231,76,60,0.6)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 20px rgba(231,76,60,0.4)'">
+		                跳过广告，开始战斗 (<span id="countdown">5</span>s)
+		            </button>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="container" id="gameContent" style="display: none;">
+			<div class="main clearfix">
+				<div id="canvasDiv" >
+					<canvas id="wallCanvas" ></canvas>
+					<canvas id="tankCanvas" ></canvas>
+					<canvas id="grassCanvas" ></canvas>
+					<canvas id="overCanvas" ></canvas>
+					<canvas id="stageCanvas" ></canvas>
+				</div>
+			</div>
+			<div class="game-help">
+				<h3>玩家1：方向键移动，空格键射击 | 玩家2：小键盘移动，回车键射击 | N：下一关，P：上一关，回车：开始</h3>
+			</div>
+		</div><!-- /container -->
+
+		<script>
+			// 开屏广告逻辑
+			(function() {
+			    let countdown = 5;
+			    const countdownElement = document.getElementById('countdown');
+			    const skipButton = document.getElementById('skipAd');
+			    const splashAd = document.getElementById('splashAd');
+			    const gameContent = document.getElementById('gameContent');
+			    
+			    // 倒计时
+			    const timer = setInterval(() => {
+			        countdown--;
+			        countdownElement.textContent = countdown;
+			        
+			        if (countdown <= 0) {
+			            clearInterval(timer);
+			            skipButton.innerHTML = '开始坦克大战 🚗';
+			            skipButton.style.background = '#27AE60';
+			        }
+			    }, 1000);
+			    
+			    // 跳过广告
+			    skipButton.addEventListener('click', () => {
+			        if (countdown <= 0 || confirm('确定要跳过广告吗？')) {
+			            splashAd.classList.add('fade-out');
+			            setTimeout(() => {
+			                splashAd.style.display = 'none';
+			                gameContent.style.display = 'block';
+			            }, 500);
+			        }
+			    });
+			    
+			    // 自动关闭
+			    setTimeout(() => {
+			        if (splashAd.style.display !== 'none') {
+			            skipButton.click();
+			        }
+			    }, 8000);
+			})();
+
+			// 防止空格键和方向键滚动页面
+			window.addEventListener('keydown', function(e) {
+				// 空格键、方向键、回车键等
+				if([32, 37, 38, 39, 40, 13].indexOf(e.keyCode) > -1) {
+					e.preventDefault();
+				}
+			}, false);
+
+			// 防止页面滚动
+			document.addEventListener('touchmove', function(e) {
+				e.preventDefault();
+			}, { passive: false });
+		</script>
+
+	</body>
+</html>

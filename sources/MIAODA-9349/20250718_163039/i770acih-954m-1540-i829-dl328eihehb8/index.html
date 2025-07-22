@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+
+<title>找茬小游戏</title>
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-decoration: none;
+	}
+	#back{
+		width: 300px;
+		height: 500px;
+		background: #000;
+		margin: 100px auto;
+		padding: 50px 50px 0;
+		position: absolute;
+		z-index: 1000;
+		top: 0;
+		left: 0;
+		right: 0;
+		opacity: 0.8;
+		display: none;
+	}
+	h1{
+		text-align: center;
+		padding-top: 200px;
+		font-size: 50px;
+	}
+	h1 a{
+		color: #fff;
+	}
+	.container{
+		position: relative;
+		width: 300px;
+		height: 500px;
+		background: #aeaeae;
+		margin: 100px auto;
+		padding: 50px 50px 0;
+	}
+	.left{
+		float: left;
+	}
+	.right{
+		float: right;
+	}
+	.main{
+		width: 300px;
+		margin: 80px auto 20px;
+		background: orange;
+		text-align: center;
+	}
+	.list1{
+		width: 100%;
+	}
+	.list1>img{
+		width: 100%;
+		display: block;
+	}
+	button{
+		width: 200px;
+		margin: 0 auto;
+		height: 40px;
+		border: 0;
+		border-radius: 10px;
+		background: linear-gradient(#59AD42,#319428);
+		color: #fff;
+		font-size: 20px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	button:hover{
+		background: linear-gradient(#319428,#59AD42);
+	}
+	#turnOff{
+		width: 80px;
+		height: 40px;
+		display: block;
+		position: absolute;
+		background: transparent;
+	}
+	
+	@keyframes fadeIn {
+	    from { opacity: 0; transform: scale(0.9); }
+	    to { opacity: 1; transform: scale(1); }
+	}
+	
+	@keyframes fadeOut {
+	    from { opacity: 1; transform: scale(1); }
+	    to { opacity: 0; transform: scale(0.9); }
+	}
+	
+	.fade-out {
+	    animation: fadeOut 0.5s ease-out forwards;
+	}
+</style>
+
+</head>
+<body>
+<!-- 找不同游戏开屏广告 -->
+<div id="splashAd" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4169E1 0%, #6495ED 50%, #87CEEB 100%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    animation: fadeIn 0.5s ease-in;
+">
+    <div style="text-align: center; max-width: 80%; padding: 20px;">
+        <div id="adContent">
+            <h1 style="font-size: 3em; margin-bottom: 20px; text-shadow: 3px 3px 6px rgba(0,0,0,0.7); color: #FFD700;">
+                👓 明亮眼镜店 👓
+            </h1>
+            <p style="font-size: 1.4em; margin-bottom: 30px; line-height: 1.6; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                保护视力，从选择合适的眼镜开始！<br>
+                专业验光，精准配镜，让您的视界更清晰！
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap;">
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; backdrop-filter: blur(10px); min-width: 150px;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">👓</div>
+                    <h3>近视眼镜</h3>
+                    <p style="color: #FFD700; font-weight: bold;">防蓝光镜片</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; backdrop-filter: blur(10px); min-width: 150px;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🕶️</div>
+                    <h3>太阳镜</h3>
+                    <p style="color: #FFD700; font-weight: bold;">UV防护</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; backdrop-filter: blur(10px); min-width: 150px;">
+                    <div style="font-size: 2em; margin-bottom: 10px;">👁️</div>
+                    <h3>护眼贴士</h3>
+                    <p style="color: #FFD700; font-weight: bold;">专业建议</p>
+                </div>
+            </div>
+            <div style="background: rgba(255,215,0,0.3); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                <p style="font-size: 1.1em; font-weight: bold;">🎯 游戏玩家专享：配镜享受6折优惠，免费视力检查和护眼指导！</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <button id="skipAd" style="
+                background: #4169E1;
+                color: white;
+                border: none;
+                padding: 15px 40px;
+                font-size: 1.2em;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 6px 20px rgba(65,105,225,0.4);
+                font-weight: bold;
+            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(65,105,225,0.6)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 20px rgba(65,105,225,0.4)'">
+                跳过广告，开始找茬 (<span id="countdown">5</span>s)
+            </button>
+        </div>
+    </div>
+</div>
+
+<!--1.两张图片 预加载好;
+2.布局-->
+<div id="back" style="display: none;">
+	<h1><a href="">重新开始</a></h1>
+</div>
+<div class="container" style="display: none;">
+	<div class="left"><span>剩余时间: </span><span id="sec"> 30 </span> s </div>
+	<div class="right"><span>分数: </span><span id="score">0</span></div>
+	<div class="main">
+		<ul>
+			<li class="list1"><img src="img/2.png"></li>
+		</ul>
+	</div>
+	<button>点 击 开 始 游 戏</button>
+	<button id="turnOff">护眼模式</button>
+</div>
+
+<script>
+// 开屏广告逻辑
+(function() {
+    let countdown = 5;
+    const countdownElement = document.getElementById('countdown');
+    const skipButton = document.getElementById('skipAd');
+    const splashAd = document.getElementById('splashAd');
+    const container = document.querySelector('.container');
+    const back = document.getElementById('back');
+    
+    // 倒计时
+    const timer = setInterval(() => {
+        countdown--;
+        countdownElement.textContent = countdown;
+        
+        if (countdown <= 0) {
+            clearInterval(timer);
+            skipButton.innerHTML = '开始找茬游戏 👁️';
+            skipButton.style.background = '#32CD32';
+        }
+    }, 1000);
+    
+    // 跳过广告
+    skipButton.addEventListener('click', () => {
+        if (countdown <= 0 || confirm('确定要跳过广告吗？')) {
+            splashAd.classList.add('fade-out');
+            setTimeout(() => {
+                splashAd.style.display = 'none';
+                container.style.display = 'block';
+                back.style.display = 'block';
+            }, 500);
+        }
+    });
+    
+    // 自动关闭
+    setTimeout(() => {
+        if (splashAd.style.display !== 'none') {
+            skipButton.click();
+        }
+    }, 8000);
+})();
+</script>
+<script type="text/javascript" charset="utf-8">
+	// 预加载图片
+	var img1 = new Image();
+	var img2 = new Image();
+	var imagesLoaded = 0;
+
+	function checkImagesLoaded() {
+		imagesLoaded++;
+		if (imagesLoaded === 2) {
+			console.log('所有图片预加载完成');
+		}
+	}
+
+	img1.onload = checkImagesLoaded;
+	img1.onerror = function() {
+		console.error('图片1加载失败:', this.src);
+		alert('游戏图片加载失败，请刷新页面重试');
+	};
+	img1.src = 'img/1.png';
+
+	img2.onload = checkImagesLoaded;
+	img2.onerror = function() {
+		console.error('图片2加载失败:', this.src);
+		alert('游戏图片加载失败，请刷新页面重试');
+	};
+	img2.src = 'img/2.png';
+
+	var btn=document.querySelector('button');
+	var z=30.00;
+	var sec=document.getElementById('sec');
+	var uls=document.querySelector('ul');
+	var li_1=document.getElementsByClassName('list1')[0];
+	var score=document.getElementById('score');
+	var level=1;
+	var n=0;
+	var turnOff=document.getElementById('turnOff');
+	turnOff.onclick=function(){
+		document.body.style.background='rgb(199,237,204)';
+		turnOff.innerHTML='普通模式';
+			turn();	
+	}
+	function turn(){
+		turnOff.onclick=function(){
+			document.body.style.background='';
+			turnOff.innerHTML='护眼模式';
+			turnOff.onclick=function(){
+				document.body.style.background='rgb(199,237,204)';
+				turnOff.innerHTML='普通模式';
+				turn();	
+			}
+		}
+	}
+	var back=document.getElementById('back');
+	btn.onclick=function(){
+		// 1.计时器
+		var timer=setInterval(function(){
+			z-=0.01;
+			z=z.toFixed(2);
+			sec.innerHTML=z;
+			if (z<=0) {
+				clearInterval(timer);
+				if (n<8) {
+					alert('GAME OVER!'+'  '+'等级:睁眼瞎');
+				}else if (n>=20) {
+					alert('GAME OVER!'+'  '+'等级:超神');
+				}else if (n>=12) {
+					alert('GAME OVER!'+'  '+'等级:火眼金睛');
+				}else{
+					alert('GAME OVER!'+'  '+'等级:高度近视');
+				}
+				back.style.display='block';
+			}
+		},10)
+		// 2.点击按钮消失,第一个li消失
+		btn.remove();
+		li_1.remove();
+		turnOff.remove();
+		// 3.添加4个li>img
+		app();
+		function app(){
+			level+=1;
+			for (var i=0;i<level*level;i++) {
+				var newLi=document.createElement('li');
+				uls.appendChild(newLi);
+				var newImg=document.createElement('img');
+				newLi.appendChild(newImg);
+				newLi.style.width=100/level+'%';
+				newLi.style.float='left';
+				newImg.style.display='block';
+				newImg.style.width=100+'%';
+				newImg.src='img/1.png';
+
+				// 添加图片加载错误处理
+				newImg.onerror = function() {
+					console.error('动态图片加载失败:', this.src);
+					this.style.backgroundColor = '#ff0000';
+					this.alt = '图片加载失败';
+				};
+				newLi.style.backgroundColor='rgb('+rand(50,255)+','+rand(50,255)+','+rand(50,255)+')';
+			}
+			var x=rand(0,level*level-1);		// 赋予一个随机特殊图片下标
+			var imgs1=document.querySelectorAll('img');
+			imgs1[x].src='img/2.png';	// 随机一张图片变成特殊图片
+
+			// 添加图片加载错误处理
+			imgs1[x].onerror = function() {
+				console.error('图片加载失败:', this.src);
+				alert('图片加载失败，请检查网络连接');
+			};
+			var li=document.querySelectorAll('li');
+			li[x].onclick=function(){
+				for (var i=0;i<level*level;i++) {
+					li[i].remove(this);
+				}
+				n+=1;
+				score.innerHTML=n;
+				if (level>10) {
+					level=10;
+				}
+				app();
+			}
+		}
+	}
+
+
+
+	// 随机函数
+	function rand(min,max){
+		return Math.round(Math.random()*(max-min)+min);
+	}
+</script>
+</body>
+</html>
+
