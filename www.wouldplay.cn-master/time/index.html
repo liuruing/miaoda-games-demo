@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>程序如何记录刻度上的百年进程-中庸之圣</title>
+<link rel="stylesheet" type="text/css" href="style/reset_y.css">
+<link rel="stylesheet" type="text/css" href="style/css.css">
+<script id="jquery_183" type="text/javascript" class="library" src="style/jquery-1.8.3.min.js"></script>
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+</head>
+<body class="impress-not-supported">
+
+<div class="bg"><img src="images/bg04.jpg" width="100%" /></div>
+
+<header class="top" id="top" style="height:40px;">
+<div class="music" id="bgMusicSwitch" title="停止背景音乐" style="z-index:10000;">
+		<div class="triangle"></div>
+		<div class="pause pause1"></div>
+		<div class="pause pause2"></div>
+	</div>
+</header>
+
+<section id="timeline" class="timeline">
+	<div id="line" class="line_white"></div>
+	<div id="impress">
+		<div id="timeList">
+			<div class="step year" data-x="-600" data-y="0" data-scale ="0.5" id="0">
+				<div class="year1921">1921</div>
+				<div class="list_show">1921年<br/></div>
+			</div>
+			<div class="timeList_item step" data-x="0" data-y="0" id="1">
+				<div class="circle">1920</div>
+				<h2 class="timeList_item_title">共产党宣言</h2>
+				<div class="list_show show1" >
+					<img src="img/1920.jpg" width="700">
+					<h2><a href="#">共产党宣言</a></h2>
+					<p>《共产党宣言》<br />中文全译本出版</p>
+				</div>
+			</div>
+			<div class="timeList_item step"  data-x="200" data-y="0" id="2">
+				<div class="circle">1921</div>
+				<h2 class="timeList_item_title">中国共产党成立</h2>
+				<div class="list_show">
+					<img src="img/1921.jpg">
+					<h2><a href="#">中国共产党成立</a></h2>
+					<p class="m160">中国共产党成立<br/></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="400" data-y="0" id="3">
+				<div class="circle">1927</div>
+				<h2 class="timeList_item_title">南昌起义</h2>
+				<div class="list_show">
+					<img src="img/1927.jpg" width="700">
+					<h2><a href="#">南昌起义</a></h2>
+					<p>南昌起义时的党证</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="600" data-y="0" id="4">
+				<div class="circle">1934</div>
+				<h2 class="timeList_item_title">红军开始长征</h2>
+				<div class="list_show show3">
+					<img src="img/1934.jpg" width="700">
+					<h2><a href="#">红军开始长征</a></h2>
+					<p>红军战士的马草鞋</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="800" data-y="0" id="5">
+				<div class="circle">1935</div>
+				<h2 class="timeList_item_title">遵义会议</h2>
+				<div class="list_show">
+					<img src="img/1935.jpg" width="700">
+					<h2><a href="#">遵义会议</a></h2>
+					<p>遵义会议会址</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="1000" data-y="0" id="6">
+				<div class="circle">1936</div>
+				<h2 class="timeList_item_title">红军长征结束</h2>
+				<div class="list_show">
+					<img src="img/1936.jpg" width="700">
+					<h2><a href="#">红军长征结束</a></h2>
+					<p>中央红军主力<br /> 长征行程25000里 <br/>纵横11个省</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="1200" data-y="0" id="7">
+				<div class="circle">1945</div>
+				<h2 class="timeList_item_title">抗日战争胜利</h2>
+				<div class="list_show show4">
+					<img src="img/1945.jpg" width="600">
+					<h2><a href="#">抗日战争胜利</a></h2>
+					<p>八路军使用的“汉阳造”步枪</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="1400" data-y="0" id="8">
+				<div class="circle">1946</div>
+				<h2 class="timeList_item_title">解放战争</h2>
+				<div class="list_show">
+					<img src="img/1946.jpg" width="700">
+					<h2><a href="#">解放战争</a></h2>
+					<p>淮海战役中的支前小车</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="1600" data-y="0" id="9">
+				<div class="circle">1949</div>
+				<h2 class="timeList_item_title">中华人民共和国成立</h2>
+				<div class="list_show show3">
+					<img src="img/1949.jpg" width="700">
+					<h2><a href="#">中华人民共和国成立</a></h2>
+					<p>新中国第一面五星红旗</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="1800" data-y="0"  id="10">
+				<div class="circle">1953</div>
+				<h2 class="timeList_item_title">抗美援朝胜利</h2>
+				<div class="list_show">
+					<img src="img/1953.jpg" width="700">
+					<h2><a href="#">抗美援朝胜利</a></h2>
+					<p class="m160">中国人们志愿军使用过的高射炮</p>
+				</div>
+			</div>
+			<div class="timeList_item step"  data-x="2000" data-y="0" id="11">
+				<div class="circle">1960</div>
+				<h2 class="timeList_item_title">“两弹一星”研制成功</h2>
+				<div class="list_show show4">
+					<img src="img/1960.jpg" width="700">
+					<h2><a href="#">“两弹一星”研制成功</a></h2>
+					<p>第一枚地地导弹<br />--东风一号发射成功</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="2200" data-y="0" id="12">
+				<div class="circle">1967</div>
+				<h2 class="timeList_item_title">第一颗氢弹爆发成功</h2>
+				<div class="list_show">
+					<img src="img/1967.jpg" width="700">
+					<h2><a href="#">第一颗氢弹爆发成功</a></h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="2400" data-y="0" id="13">
+				<div class="circle">1970</div>
+				<h2 class="timeList_item_title">第一颗人造卫星发射成功</h2>
+				<div class="list_show">
+					<img src="img/1970.jpg" width="500">
+					<h2><a href="#">第一颗人造卫星发射成功</a></h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="2600" data-y="0" id="14">
+				<div class="circle">1970</div>
+				<h2 class="timeList_item_title">改革开放</h2>
+				<div class="list_show">
+					<img src="img/1970a.jpg" width="700">
+					<h2><a href="#">改革开放</a></h2>
+					<p class="m160">凤阳县小岗村“大包干”</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="2800" data-y="0" id="15">
+				<div class="circle">1978</div>
+				<h2 class="timeList_item_title">十一届三中全会召开</h2>
+				<div class="list_show show5">
+					<img src="img/1978.jpg" width="700">
+					<h2><a href="#">十一届三中全会召开</a></h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="3000" data-y="0" id="16">
+				<div class="circle">1980</div>
+				<h2 class="timeList_item_title">深圳经济特区成立</h2>
+				<div class="list_show">
+					<img src="img/1980.jpg" width="700">
+					<h2><a href="#">深圳经济特区成立</a></h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="3200" data-y="0" id="17">
+				<div class="circle">1997</div>
+				<h2 class="timeList_item_title">香港回归</h2>
+				<div class="list_show">
+					<img src="img/1997.jpg" width="700">
+					<h2><a href="#">香港回归</a></h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="3400" data-y="0" id="18">
+				<div class="circle">1999</div>
+				<h2 class="timeList_item_title">澳门回归</h2>
+				<div class="list_show">
+					<img src="img/1999.jpg" width="500">
+					<h2><a href="#">澳门回归</a></h2>
+					<p ></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="3600" data-y="0" id="19">
+				<div class="circle">2003</div>
+				<h2 class="timeList_item_title">首次载人航天飞行</h2>
+				<div class="list_show show4">
+					<img src="img/2003.jpg" width="700">
+					<h2><a href="#">首次载人航天飞行</a></h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="3800" data-y="0" id="20">
+				<div class="circle">2008</div>
+				<h2 class="timeList_item_title">北京奥运会</h2>
+				<div class="list_show show4">
+					<img src="img/2008.jpg" width="700"/>
+					<h2><a href="#">北京奥运会</a></h2>
+					<p ></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="4000" data-y="0" id="21">
+				<div class="circle">2008</div>
+				<h2 class="timeList_item_title">首艘国产航母</h2>
+				<div class="list_show">
+					<img src="img/2008a.jpg" width="700">
+					<h2><a href="#">首艘国产航母</a></h2>
+					<p>山东舰</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="4200" data-y="0" id="22">
+				<div class="circle">2020</div>
+				<h2 class="timeList_item_title">中国天眼</h2>
+				<div class="list_show show5">
+					<img src="img/2020.jpg" width="700">
+					<h2><a href="#">中国天眼</a></h2>
+					<p><br />500米口径球面射电望眼镜正式开放运行</p>
+				</div>
+			</div>
+			
+			<div class="timeList_item step" data-x="4400" data-y="0" id="24">
+				<div class="circle">2020</div>
+				<h2 class="timeList_item_title">脱贫攻坚战取得全面胜利</h2>
+				<div class="list_show">
+					<img src="img/2020a.jpg" width="700">
+					<h2><a href="#">脱贫攻坚战<br />取得全面胜利</a></h2>
+					<p><br /><br />“悬崖村”群众走下“天梯”搬新居</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="4600" data-y="0" id="25">
+				<div class="circle">2020</div>
+				<h2 class="timeList_item_title">珠峰高程测定</h2>
+				<div class="list_show">
+					<img src="img/2020b.jpg" width="700">
+					<h2><a href="#">珠峰高程测定</a></h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="4800" data-y="0" id="26">
+				<div class="circle">2020</div>
+				<h2 class="timeList_item_title">"奋斗者"号</h2>
+				<div class="list_show">
+					<img src="img/2020c.jpg" width="700">
+					<h2><a href="#">"奋斗者"号</a></h2>
+					<p>成功坐底马里亚纳海沟<br />创造中国载人深潜记录</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="5000" data-y="0" id="27">
+				<div class="circle">2020</div>
+				<h2 class="timeList_item_title">港珠澳大桥</h2>
+				<div class="list_show">
+					<img src="img/2020d.jpg" width="700">
+					<h2><a href="#">港珠澳大桥</a></h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="5200" data-y="0" id="28">
+				<div class="circle">2020</div>
+				<h2 class="timeList_item_title">北斗三号</h2>
+				<div class="list_show">
+					<img src="img/2020e.jpg" width="700">
+					<h2><a href="#">北斗三号</a></h2>
+					<p>北斗三号全球卫星导航系统正式开通</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="5400" data-y="0" id="29">
+				<div class="circle">2020</div>
+				<h2 class="timeList_item_title">中国高铁</h2>
+				<div class="list_show">
+					<img src="img/2020f.jpg" width="700">
+					<h2><a href="#">中国高铁</a></h2>
+					<p>运营里程稳居世界第一</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="5600" data-y="0" id="30">
+				<div class="circle">2020</div>
+				<h2 class="timeList_item_title">嫦娥五号</h2>
+				<div class="list_show">
+					<img src="img/2020g.jpg" width="700">
+					<h2><a href="#">嫦娥五号</a></h2>
+					<p>首次实现地外天体采样返回</p>
+				</div>
+			</div>
+			<div class="timeList_item step" data-x="5800" data-y="0" id="31">
+				<div class="circle">2021</div>
+				<h2 class="timeList_item_title">天问一号</h2>
+				<div class="list_show">
+					<img src="img/2021.jpg" width="700">
+					<h2><a href="#">天问一号</a></h2>
+					<p>天问一号着陆巡视器着陆火星</p>
+				</div>
+			</div>
+			<div class="step" data-x="5800" data-y="0" data-scale ="0.5" id="2021">
+				<div class="year2021"> 2021 </div>
+				<div class="list_show year"> 从毫米之微 到 万里之遥<br />刻度丈量百年  征途唯有奋斗 </div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<div class="gotop"> <a href="#top"><img src="images/top.png" title="回顶部"/></a></div>
+<div class="scale" style="z-index:1000;background:url(style/licbg.png);height:23px;position:relative;top:-40px;width:100%;"></div>
+<div class="scale" style="z-index:1000;background:url(style/licbg.png);height:23px;position:relative;top:920px;width:100%;"></div>
+<script type="text/javascript" src="style/impress.js"></script>
+
+</body>
+</html>
+
+<script>
+
+
+var section = $('.scale');
+var x =0;
+function polling() {
+	x += 5;
+	section.animate({
+		'background-position-x': x+'%',
+	}, 400, 'linear');
+	setTimeout(polling,1000);
+}
+ 
+    polling();
+var impress = $.browser.msie?undefined:impress();
+
+//预加载图片
+new Image().src = "images/bg04.jpg";
+new Image().src = "images/bg01.jpg";
+new Image().src = "images/bg02.jpg";
+new Image().src = "images/bg03.jpg";
+
+var replay = function(){
+	if(impress){
+		impress.goto($("#0")[0]);
+	}else{
+		location.reload();
+	}
+};
+
+
+var event_cache = null;
+
+var loop = true,timing=null;
+
+$(function(){			
+	
+	 $(window).bind('scroll resize',function(){
+        if($(window).scrollTop() >= 1)
+            $('.gotop').css('display','block');
+        else
+            $('.gotop').css('display','none');
+    });   
+	
+	var cache_event_top = function(){
+		if(event_cache!=null)
+			return;
+		event_cache = new Array(31);
+		var i = 0;
+		var length = event_cache.length;
+		for(;i<length;i++){
+			var id = i+1;
+			event_cache[i] = $("#"+id).position().top;
+		}
+	}
+		
+	var resize = function(){
+		
+		var width = $(window).width();
+		var height = $(window).height();
+		$(".bg img").css("width",width);
+		$(".bg img").css("height",height);
+		
+	};
+		
+	var cur_month = 2;
+
+	var getMonthByTop = function(top){
+		for(var i=0,event=event_cache[i];i<event_cache.length;i++){
+				if(i==event_cache.length-1 && top>=event || top>=event && top<event_cache[i+1]){
+					var date = $("#"+(i+1)).find(".circle").html();
+					if(date){
+						var month = +date.split("/")[0];
+						return month;
+					}
+				}
+		}
+		return cur_month;
+	};
+		
+	var scroll = function(){
+		if($.browser.msie){
+			cache_event_top();
+			var st = $(window).scrollTop();
+			var month = getMonthByTop(st);
+			if(month!=cur_month){
+				changeBackground(month);
+				cur_month = month;
+			}
+		}
+	};
+	
+	resize();
+	
+	$(window).resize(function(){
+		resize();
+	});
+	
+	$(window).scroll(function(){
+		scroll();
+	});
+	
+	$(".circle").click(function(){
+			loop = false;
+		if(timing)
+			clearInterval(timing);
+	});
+	$(".refresh img").click(function(){
+		loop = true;
+		$(".refresh img").addClass("rotate45");
+		setTimeout(function(){
+			$(".refresh img").removeClass("rotate45");
+		},1000);	
+	});
+	if(!$.browser.msie){
+		if($.browser.safari)
+			bgMusic = new Audio('music/1.mp3');
+		else
+			bgMusic = new Audio('music/1.mp3');//ogg
+		bgMusic.loop = true;
+		bgMusic.volume = 0.7;
+		$('#bgMusicSwitch').click(function(){
+			if(bgMusic.paused){
+				bgMusic.play();
+				$(".triangle").css("display","none");
+				$(".pause").css("display","block");
+				$("#bgMusicSwitch").attr("title","暂停背景音乐");
+			}else{
+				bgMusic.pause();
+				$(".pause").css("display","none");
+				$(".triangle").css("display","block");
+				$("#bgMusicSwitch").attr("title","播放背景音乐");
+			}});
+		var bgSwitch = function(){
+			$('#bgMusicSwitch').trigger('click');
+		}
+				
+		bgSwitch();
+	}else{
+		$(".music").hide();
+	}		
+	
+});
+
+
+if(impress)impress.init();
+
+var last_month = 4;
+
+var changeBackground = function(month){
+	var body = $("body");
+	var url = "";
+	if(month == 12 || month == 1 || month==2){
+		if(last_month==4)
+			return;
+		last_month = 4;
+		url = "images/bg04.jpg";
+		$("header").css("background-color","rgba(255,255,255,0.2)");
+		$(".impress-supported .list_show h2").css("color","#0087f1");
+		$(".impress-not-supported .timeList_item_title").css("color","#0087f1");
+	}else if(month>=3 && month<=5){
+		if(last_month==1)
+			return;
+		last_month = 1;
+		url = "images/bg01.jpg";
+		$("header").css("background-color","rgba(255,255,255,0.2)");
+		$(".impress-supported .list_show h2").css("color","#fff");
+		$(".impress-not-supported .timeList_item_title").css("color","#eca200");
+	}else if(month>=6 && month<=8){
+		if(last_month==2)
+			return;
+		last_month = 2;
+		url = "images/bg02.jpg";
+		$("header").css("background-color","rgba(0,0,0,0.2)");
+		$(".impress-supported .list_show h2").css("color","#82e211");
+		$(".impress-not-supported .timeList_item_title").css("color","#82e211");
+	}else{
+		if(last_month==3)
+			return;
+		last_month = 3;
+		url = "images/bg03.jpg";
+		$("header").css("background-color","rgba(255,255,255,0.2)");
+		$(".impress-supported .list_show h2").css("color","#ffca00");
+		$(".impress-not-supported .timeList_item_title").css("color","#ffca00");
+	}
+	$(".bg img").attr("src",url);
+};
+
+if(!$.browser.msie){
+	document.addEventListener('impress:stepenter', function(e){
+		var cur = arguments[0].target;
+		var date = $(cur).find(".circle").html();
+		if(date){
+			var month = +date.split("/")[0];
+			changeBackground(month);
+		}
+		if(!loop)
+			return;
+		if (typeof timing !== 'undefined') clearInterval(timing);
+		var duration = 2000;
+		timing = setInterval(function(){
+			var dom = impress.next();
+			var id = +$(dom).attr("id");
+			if(id==32){
+				clearInterval(timing);
+				loop = false;
+			}
+		}, duration);
+	});
+}
+</script>

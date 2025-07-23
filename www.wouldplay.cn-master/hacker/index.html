@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="/images/logo.png" />
+	<link rel="canonical" href="https://wouldplay.cn/hacker/">
+	<script type="text/javascript" async="" src="./js/analytics.js"></script>
+	<script src="./js/jquery-jqui.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/hacker.css">
+	<title>在线黑客模拟器</title>	
+    <meta name="description" content="开始输入随机文本，模拟您&#39；重新入侵计算机系统。点击右边的图标或。。。">
+    <meta name="keywords" content="黑客模拟器">
+    <meta property="og:title" content="黑客模拟器">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wouldplay.cn/hacker/">
+    <meta property="og:image" content="https://wouldplay.cn/hacker/og.jpg">
+    <meta property="og:description" content="开始输入随机文本，模拟您&#39；重新入侵计算机系统。点击右边的图标或。。。">
+</head>
+<style type="text/css">
+ 
+　　html,div{
+	　　overflow-x:hidden;
+	　　overflow-y:hidden;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+　　}
+	
+　　</style>
+<body>
+	<div id="desktop" class="">
+		<div id="typingArea">
+			<div id="wrapDesktopTyper">
+				<span id="desktopTyper">终端： </span><span class="cursor cursorBlink">_</span>
+			</div>
+		</div>
+		<div class="window closed howToUse ui-draggable ui-draggable-handle" data-ico="?" data-title="有用的信息" data-id="0" id="window0" style="z-index: 1000;">
+		<div class="windowHeader"><strong>有用的信息</strong><span title="Minimize" class="winminimize"><span></span></span>
+		<span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="scroll-wrapper scrollbar-rail" style="position: relative;">
+			<div class="scrollbar-rail scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+				<p><strong>欢迎使用这个交互式黑客模拟器。单击右侧的图标打开程序或按键盘上的数字。用鼠标拖动窗口以在桌面上组织它们。</strong></p>
+
+				<h2>如何避免被黑客攻击</h2>
+
+				<p>你可以做一些简单的事情来防止被黑客攻击。你不需要成为一个电脑专家就可以采取这些简单的步骤来节省你的时间，挫败感，甚至可能是金钱</p>
+
+				<h3>保持一切最新</h3>
+
+				<p>也许你忽略了电脑或手机上那些告诉你有新更新的弹出窗口。请记住，这些更新通常是安全增强。当软件开发者知道黑客已经学会了如何进入他们的软件时，他们会发布一个更安全的更新。通过接受这些更新邀请或在可用时启用自动更新功能，确保您正在使用最新版本</p>
+
+				<h3>安装反病毒和反恶意软件</h3>
+
+				<p>你可能认为你不需要特殊的软件来保证你的电脑和信息的安全，但你确实需要。安装防病毒和反恶意软件，从一个有信誉的公司，再次，一定要保持更新。另外，将其设置为定期扫描计算机以搜索任何新的恶意程序</p>
+
+				<h3>使用强密码并定期更改</h3>
+
+				<p>弱密码使黑客的工作变得容易。人们通常使用的密码很快就可以计算出来，或者根据宠物或爱人的名字，很容易在网上找到。一定要选择一些没人能猜到的东西，包括大小写字母、数字和至少一个符号。切勿在多个站点上使用同一密码。如果有人在一个网站上获取了您的密码，他们就可以访问您的其他帐户</p>
+
+				<h3>使用双因素身份验证</h3>
+
+				<p>双因素身份验证是一个令人惊奇的新的安全特性，太多人忽视了它。许多银行、电子邮件提供商和其他网站允许您启用此功能，以防止未经授权的用户进入您的帐户。当您输入用户名和密码时，网站会向您的手机或电子邮件帐户发送一个代码。然后输入该代码以访问该站点。大多数网站给你的选择是“记住”你每天使用的电脑。但是，如果有人试图从另一台计算机访问你的帐户，一个被盗的密码将不足以让他们入侵你</p>
+
+				<h3>删除可疑电子邮件</h3>
+
+				<p>信誉良好的公司永远不会通过电子邮件向您索要密码。家庭成员很少会要求把钱汇到一个未知的地方。如果电子邮件听起来很奇怪，很有可能是恶意的。继续删除它。如果您不确定，请直接通过电话联系发件人查看</p>
+
+				<h3>保护您的智能手机</h3>
+
+				<p>许多人不喜欢使用智能手机时需要输入pin码或密码带来的不便。但这是值得的。如果你丢失了你的手机，没有pin码或密码，找到它的人可以访问你的帐户、密码，甚至支付信息</p>
+
+				<h2>交互式程序</h2>
+
+				<p>可以使用屏幕右侧的图标打开交互式程序。尝试与这些程序交互，因为它们中的大多数都会响应您的操作</p>
+
+				<p>玩游戏，你可以挖掘比特币，观看监控摄像头，破解密码，控制核电站，闯入国际刑警组织的数据库或找到最好的秘密交易</p>
+
+				<h2>被动窗</h2>
+
+				
+
+				<p>按键盘上的数字按钮（0-9）打开被动窗口。这些程序在屏幕中央显示一个静态或动画窗口。你可以用鼠标拖动它们。按空格键关闭它们</p>
+
+				<p>显示“拒绝访问”或“授予权限”警告，开始自毁倒计时，播放动画神经网络跟踪或<a href="https://pranx.com/matrix-code-rain" target="_blank"> 矩阵代码rain</a>。安装病毒，下载机密数据，用卫星追踪电脑的位置等等</p>
+
+				<h2>黑客</h2>
+
+				<p>最小化或关闭所有窗口，并开始按键盘上的随机按钮，以模拟您正在编写程序。黑客会一次在屏幕上添加多个字符，使你的书写看起来更快</p>
+
+				<p>“打开”远程连接" 程序来模拟你正在入侵一个绝密的政府服务器。这个自动黑客将触发服务器响应，并将显示在屏幕上的各种程序和警告</p>
+
+				<p>更详细的<a href="https://html-online.com/articles/geek-hacker-typer" “target="_blank"> 说明指南请访问HTML Online</a></p>
+
+				<p><strong>Find more online pranks at <a href="https://pranx.com/">Pranx</a>!</strong></p>
+			</div>
+			<div class="scroll-element scroll-x"><div class="scroll-element_outer">
+			<div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div>
+			<div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div>
+			<div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>		
+		<div class="window closed mainServer ui-draggable ui-draggable-handle" data-ico="╩" data-title="主服务器" data-id="1" id="window1" style="z-index: 1000;"><div class="windowHeader">
+		<strong>主服务器</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Maximize" class="winmaximize"><span></span><span></span></span>
+		<span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="scroll-wrapper scrollbar-rail" style="position: relative;">
+			<div class="scrollbar-rail scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+				<div id="serverScreen">
+					<div class="serverScreenTop">
+						服务器IP地址：23.86.111.0<br>
+                        主gvt服务器。警告：绝密！
+					</div>
+				</div>
+			</div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>		
+		<div class="window closed bitcoinMiner ui-draggable ui-draggable-handle" data-ico="B" data-title="Bitcoin Miner" data-id="2" id="window2" style="z-index: 1000;">
+		<div class="windowHeader"><strong>比特币矿工</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">		
+			<div class="scroll-wrapper scrollbar-rail" style="position: relative;"><div class="scrollbar-rail scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+				<div class="bitcoin">
+					<div class="divTable">
+						<div class="divTableBody">
+							<div class="divTableRow">
+								<div class="divTableCell">
+									128.154.26.11连接到btcn.miner.bitcoin heap.htmlg.com<br>
+
+										已授予许可！块：…7e9Wq#001 Diff:147M<br>你知道吗
+
+										初始化的GPU#0-#32:[确定]（1.092Ph/s）开始@<span class="clock">17:02:58</span><br>
+
+										超频设置为300%| BW:[55/13/4Mh/kWh]<br>
+
+										<span class="showWhileMining">在不安全模式下运行BitCrane.exe |状态：矿工正在运行</span>
+								</div>
+								<div class="divTableCell">
+									<div id="btcValletWrap">
+										<div id="valletHeader">钱包</div>
+										BTC<span id="btcVallet">8</span>
+										<span id="btcIcon"></span>
+										<div id="btcEstim">≈ $<span id="btcDollar">39664</span></div>
+									</div>
+								
+								</div>
+							</div>
+							<div class="divTableRow showWhileMining">
+								<div class="divTableCell">
+									<div class="divTable bordered">
+										<div class="divTableBody">
+											<div class="divTableHeading">
+												<div class="divTableHead">ASICs</div>
+												<div class="divTableHead">Accepted</div>
+												<div class="divTableHead">Rejected</div>
+												<div class="divTableHead">GH/s 5s</div>
+											</div>
+											<div class="divTableRow">
+												<div class="divTableCell">1</div>
+												<div class="divTableCell"><span class="addRemoveRandom" data-rand="100">32442</span></div>
+												<div class="divTableCell"><span class="addRemoveRandom" data-rand="5">354</span></div>
+												<div class="divTableCell"><span class="addRemoveRandom" data-rand="10">353</span>.54 Gh/s</div>
+											</div>
+											<div class="divTableRow">
+												<div class="divTableCell">32</div>
+												<div class="divTableCell"><span class="addRemoveRandom" data-rand="100">56954</span></div>
+												<div class="divTableCell"><span class="addRemoveRandom" data-rand="5">8763</span></div>
+												<div class="divTableCell"><span class="addRemoveRandom" data-rand="2">34</span>.99 Gh/s</div>
+											</div>
+											<div class="divTableRow">
+												<div class="divTableCell">Sum</div>
+												<div class="divTableCell"><span class="addRemoveRandom" data-rand="90">8345345</span></div>
+												<div class="divTableCell"><span class="addRemoveRandom" data-rand="10">32122</span></div>
+												<div class="divTableCell">~<span class="addRemoveRandom" data-rand="2">153</span> Gh/s</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="divTableCell">
+									<div id="miningGraph">
+									</div>
+								</div>
+							</div>
+							<div class="divTableRow">
+								<div class="divTableCell">
+									<div id="rollingBitcoinScreenWrap">
+										<div id="rollingBitcoinScreen">
+											<div class="button" id="startBitcoinMine">开始挖掘 </div>
+										</div>
+									</div>
+								</div>
+								<div class="divTableCell">
+									<div class="showWhileMining">
+										<div class="blinking" id="miningBlinker">
+											采矿。。。
+										</div>
+										<div class="bitcoinAnimation">
+											<div class="heap">
+											</div>
+											<div class="hammer">
+											</div>
+											<div class="bang">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>
+		<div class="window closed bank ui-draggable ui-draggable-handle" data-ico="◰" data-title="Headquarter surveillance" data-id="3" id="window3" style="z-index: 1000;">
+		<div class="windowHeader"><strong>总部监视</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="wrapVideo">
+				<div class="loading">连接中。。。<br><img src="./img/wait.gif" alt="loading"></div>
+				<div class="watch"><span class="datum">2021-51-16</span><br><span class="ora">17:03:11</span></div>
+				<div class="video" data-iframe="CTV9kOEP8Mo" style="height: 200px; width: 356px;"></div>
+			</div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>
+		<div class="window closed passwordCracker ui-draggable ui-draggable-handle" data-ico="*|" data-title="密码破解器" data-id="4" id="window4" style="z-index: 1000;"><div class="windowHeader"><strong>密码破解器</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="scroll-wrapper scrollbar-rail" style="position: relative;"><div class="scrollbar-rail scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+				<div id="wrapPWCrack">
+					<div id="pWCrackHeader">
+						<span id="pwButt2">破解</span><span id="pwButt1">重置</span><span id="pwButt3">穿透</span>
+					</div>
+					<div id="pWCrackInner">
+						<div id="lockAnimation">
+						</div>
+						<table>
+							<tbody>
+								<tr>
+									<td>目标:</td>
+									<td><span contenteditable="true" class="inputfield" spellcheck="false" id="targetIp">23.86.111.0</span></td>
+								</tr>
+								<tr>
+									<td>数据库:</td>
+									<td><span contenteditable="true" class="inputfield" spellcheck="false">User table / Admin role</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="divTable" id="pwCrackTable">
+						<div class="divTableBody">
+							<div class="divTableRow" id="pwGuesserRow">
+								<div class="divTableCell" id="pw1">&nbsp;</div>
+								<div class="divTableCell" id="pw2"></div>
+								<div class="divTableCell" id="pw3"></div>
+								<div class="divTableCell" id="pw4"></div>
+								<div class="divTableCell" id="pw5"></div>
+								<div class="divTableCell" id="pw6"></div>
+								<div class="divTableCell" id="pw7"></div>
+								<div class="divTableCell" id="pw8"></div>
+								<div class="divTableCell" id="pw9"></div>
+								<div class="divTableCell" id="pw10"></div>
+								<div class="divTableCell" id="pw11"></div>
+								<div class="divTableCell" id="pw12"></div>
+								<div class="divTableCell" id="pw13"></div>
+								<div class="divTableCell" id="pw14"></div>
+								<div class="divTableCell" id="pw15"></div>
+							</div>
+							<div class="divTableRow" id="pwOkRow">
+								<div class="divTableCell nowGuessing" id="pwok1">&nbsp;</div>
+								<div class="divTableCell" id="pwok2"></div>
+								<div class="divTableCell" id="pwok3"></div>
+								<div class="divTableCell" id="pwok4"></div>
+								<div class="divTableCell" id="pwok5"></div>
+								<div class="divTableCell" id="pwok6"></div>
+								<div class="divTableCell" id="pwok7"></div>
+								<div class="divTableCell" id="pwok8"></div>
+								<div class="divTableCell" id="pwok9"></div>
+								<div class="divTableCell" id="pwok10"></div>
+								<div class="divTableCell" id="pwok11"></div>
+								<div class="divTableCell" id="pwok12"></div>
+								<div class="divTableCell" id="pwok13"></div>
+								<div class="divTableCell" id="pwok14"></div>
+								<div class="divTableCell" id="pwok15"></div>
+							</div>
+							<div class="divTableRow" id="pwCheckedRow">
+								<div class="divTableCell" id="pwcheck1">×</div>
+								<div class="divTableCell" id="pwcheck2">×</div>
+								<div class="divTableCell" id="pwcheck3">×</div>
+								<div class="divTableCell" id="pwcheck4">×</div>
+								<div class="divTableCell" id="pwcheck5">×</div>
+								<div class="divTableCell" id="pwcheck6">×</div>
+								<div class="divTableCell" id="pwcheck7">×</div>
+								<div class="divTableCell" id="pwcheck8">×</div>
+								<div class="divTableCell" id="pwcheck9">×</div>
+								<div class="divTableCell" id="pwcheck10">×</div>
+								<div class="divTableCell" id="pwcheck11">×</div>
+								<div class="divTableCell" id="pwcheck12">×</div>
+								<div class="divTableCell" id="pwcheck13">×</div>
+								<div class="divTableCell" id="pwcheck14">×</div>
+								<div class="divTableCell" id="pwcheck15">×</div>
+							</div>
+						</div>
+					</div>
+					<div id="pwdResult">
+						<div class="aligncenter">状态: 待命<br><span class="button" onclick="startPwCrack(10)">开始暴力攻击</span></div>
+					</div>
+					<div id="pwdLegal">
+						<strong>法律声明:</strong> Using <em>Password&nbsp;Cracker™</em> for harmful and illegal activities is strictly prohibited and punishable&nbsp;by&nbsp;death!
+					</div>
+				</div>
+			</div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>		
+		<div class="window closed reactor ui-draggable ui-draggable-handle" data-ico="⊗" data-title="Nuclear Plant" data-id="5" id="window5" style="z-index: 1000;">
+		<div class="windowHeader"><strong>核电站</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="scroll-wrapper scrollbar-rail" style="position: relative;"><div class="scrollbar-rail scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+				<div id="wrapNuclearPlant">
+					<div id="nuclearFloods">
+						<div class="flood"><div data-percent="39" data-step="6" style="height: 39%;"></div></div>
+						<div class="flood" id="flood2"><div data-percent="43" data-step="6" style="height: 43%;"></div></div>
+						<div class="flood" id="flood3"><div data-percent="53" data-step="36" style="height: 53%;"></div></div>
+						<div class="flood" id="flood4"><div data-percent="71" data-step="36" style="height: 71%;"></div></div>
+						<div class="flood" id="flood5"><div data-percent="15" data-step="6" style="height: 15%;"></div></div>
+						<div class="flood" id="flood6"><div data-percent="15" data-step="46" style="height: 15%;"></div></div>
+					</div>
+					<div id="nuclearPlant">
+						<div class="randomnr" id="nr01" data-step="0.3">19.4</div>
+						<div class="randomnr" id="nr02" data-step="0.3">18</div>
+						<div class="randomnr" id="nr03" data-step="5">657</div>
+						<div class="randomnr" id="nr04" data-step="0.3">2021</div>
+						<div class="randomnr" id="nr05" data-step="0.3">6</div>
+						<div class="randomnr" id="nr06" data-step="100">70373</div>
+						<div class="randomnr" id="nr07" data-step="1">0</div>
+						<div class="randomnr" id="nr08" data-step="0.2">15.7</div>
+						<div class="randomnr yellow" id="nr09" data-step="1">120</div>
+						<div class="randomnr yellow" id="nr10" data-step="10">2600</div>
+						<div class="randomnr yellow" id="nr11" data-step="0">0</div>
+						<div class="randomnr yellow" id="nr12" data-step="10">1512</div>
+						<div class="randomnr" id="nr13" data-step="5">130</div>
+						<div class="randomnr yellow" id="nr14" data-step="0">0</div>
+						<div class="randomnr yellow" id="nr15" data-step="5">1516</div>
+						<div class="randomnr" id="nr16" data-step="10">2184</div>
+						<div class="randomnr" id="nr17" data-step="5">2176</div>
+						<div class="randomnr" id="nr18" data-step="1">220</div>
+						<div class="randomnr" id="nr19" data-step="0.5">235.5</div>
+						<div class="randomnr" id="nr20" data-step="0">0</div>
+						<div class="randomnr" id="nr21" data-step="5">935</div>
+						<div class="randomnr" id="nr22" data-step="2">607</div>
+						<div class="randomnr" id="nr23" data-step="0.5">47.5</div>
+						<div class="randomnr" id="nr24" data-step="5">564</div>
+						<div class="randomnr" id="nr25" data-step="5">1962</div>
+						<div class="randomnr" id="nr26" data-step="0.5">605.5</div>
+						<div class="randomnr" id="nr27" data-step="5">935</div>
+						<div class="randomnr yellow" id="nr28" data-step="5">1506</div>
+						<div class="randomnr" id="nr29" data-step="5">299</div>
+						<div class="randomnr" id="nr30" data-step="0.5">75.5</div>
+						<div class="randomnr" id="nr31" data-step="0">0</div>
+						<div class="randomnr" id="nr32" data-step="2">45</div>
+						<div class="randomnr" id="nr33" data-step="7">568</div>
+						<div class="randomnr" id="nr34" data-step="20">2003</div>
+						<div class="randomnr" id="nr35" data-step="0.5">73.8</div>
+						<div class="randomnr" id="nr36" data-step="2">296</div>
+						<div class="randomnr yellow" id="nr37" data-step="0.8">1506.5</div>
+					</div>
+				</div>
+			</div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>	
+		<div class="window closed remoteConnection ui-draggable ui-draggable-handle" data-ico="╩" data-title="远程连接" data-id="6" id="window6" style="z-index: 1000;"><div class="windowHeader"><strong>远程连接</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="scroll-wrapper scrollbar-rail" style="position: relative;"><div class="scrollbar-rail scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+				<span id="remoteText"></span>
+				<span class="cursor cursorBlink"></span>
+			</div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>
+		<!-- <div class="window closed reklamocskak ui-draggable ui-draggable-handle" data-ico="$" data-title="Advertisements" data-id="7" id="window7" style="z-index: 1000;">
+		<div class="windowHeader">
+		<strong>广告 </strong><span title="Minimize" class="winminimize"><span></span></span>
+		<span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="wrapFreestar"></div>
+			<div id="wrapBestDeals">
+			</div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+		</div></div> -->
+
+		<div class="window closed interpol ui-draggable ui-draggable-handle" data-ico="⇔" data-title="Interpol database" data-id="8" id="window8" style="z-index: 1000;">
+		<div class="windowHeader"><strong>国际刑警组织数据库</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="wrapVideo">
+				<div class="loading">加载中...<br><img src="./img/wait.gif" alt="loading"></div>
+				<div class="video" data-iframe="llufppyponk" style="height: 200px; width: 356px;">
+				</div>
+				<div class="wrapReklamocska">
+<!-- NeonGreen Responsive TextOnly -->
+				</div>
+			</div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>		
+		<div class="window closed consoleWindow ui-draggable ui-draggable-handle" data-ico="&gt;." data-title="Program Console" data-id="9" id="window9" style="z-index: 1000;">
+		<div class="windowHeader"><strong>程序控制台</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Maximize" class="winmaximize"><span></span><span></span></span><span title="Close" class="winclose">×</span></div><div class="wincontent ui-resizable">
+			<div class="scroll-wrapper scrollbar-rail" style="position: relative;"><div class="scrollbar-rail scroll-content" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+				<span id="consoleText"></span>
+				<span class="cursor cursorBlink"></span>
+			</div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar"></div></div></div></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div></div>		
+		<div id="accessDenied" class="ablakocska ablakocska0 ui-draggable ui-draggable-handle" data-id="0" style="left: 760px;"><div class="ablakcontent"><a class="closeAblakocska" title="Close">×</a>
+			<span>🗙 拒绝访问 </span>
+		</div></div>
+		<div id="permissionGranted" class="ablakocska ablakocska1 ui-draggable ui-draggable-handle" data-id="1" style="left: 760px;"><div class="ablakcontent"><a class="closeAblakocska" title="Close">×</a>
+			<span>已授予权限 <img src="./img/lock-green.gif" alt="unlocked"> </span>
+		</div></div>
+		<div id="selfDestruct" class="ablakocska ablakocska2 ui-draggable ui-draggable-handle" data-id="2" style="left: 760px;"><div class="ablakcontent"><a class="closeAblakocska" title="Close">×</a>
+			<span>系统自毁<br><strong id="selfDestructCount">587</strong><br><span>序列接通</span></span>
+		</div></div>
+		<div id="topSecret" class="ablakocska ablakocska3 ui-draggable ui-draggable-handle" data-id="3" style="left: 760px;"><div class="ablakcontent"><a class="closeAblakocska" title="Close">×</a>
+			<img src="./img/top-secret.png" alt="classified">
+		</div></div>
+		<div id="partikulacskak" class="ablakocska ablakocska4 ui-draggable ui-draggable-handle" data-id="4" style="left: 710px;">
+			<div class="ablakcontent"><a class="closeAblakocska" title="Close" onclick="$('#partikulacskak').css('border','none');">×</a>
+				<div>
+					<span>网络跟踪</span>
+					<div id="partikulacskakIde"></div>
+				</div>
+			</div>
+		</div>		
+		<div id="matrixRain" class="ablakocska ablakocska5 ui-draggable ui-draggable-handle" data-id="5" style="left: 710px;">
+		<div class="ablakcontent"><a class="closeAblakocska" title="Close" onclick="$('#matrixRain').css('border','none');">×</a>
+			<div>编译代码</div>
+			<canvas id="c" height="969" width="1920"></canvas>
+		</div></div>
+		<div id="pcvirus" class="ablakocska ablakocska6 ui-draggable ui-draggable-handle" data-id="6" style="left: 760px;"><div class="ablakcontent"><a class="closeAblakocska" title="Close">×</a>
+			<div>
+				安装恶意软件<br>
+				<img src="./img/skull.png" alt="skull">
+				<div class="processBar"><div></div></div>
+			</div>
+		</div></div>
+		<div id="grafikon" class="ablakocska ablakocska7 ui-draggable ui-draggable-handle" data-id="7" style="left: 760px;">
+		<div class="ablakcontent"><a class="closeAblakocska" title="Close" onclick="$('#grafikon').css('border','none');">×</a>
+			<div>
+				<canvas id="chart" width="400" height="300"></canvas>
+			</div>
+		</div></div>
+		<div id="downloadingData" class="ablakocska ablakocska8 ui-draggable ui-draggable-handle" data-id="8" style="left: 760px;"><div class="ablakcontent"><a class="closeAblakocska" title="Close">×</a>
+			<div>
+				下载机密数据<br>
+				<img src="./img/topsecret.png" alt="highly classified">
+				<div class="processBar"><div></div></div>
+			</div>
+		</div></div>
+		<div id="tracingIP" class="ablakocska ablakocska9 ui-draggable ui-draggable-handle" data-id="9" style="left: 760px;"><div class="ablakcontent"><a class="closeAblakocska" title="Close">×</a>
+			<div id="satellite">
+				<h3 class="blinking">建立<br>卫星连接</h3>
+				<div id="satelliteAnimWrap">
+					<div id="satelliteAnim" class="clockwiseTurn">
+						<img id="globe" alt="globe" src="./img/globe.gif">
+						<img id="triangle" alt="triangle" src="./img/triangle.gif">
+						<img class="satellite counterClockwiseTurn" id="szat1" alt="satellite" src="./img/satellite.gif">
+						<img class="satellite counterClockwiseTurn" id="szat2" alt="satellite" src="./img/satellite.gif">
+						<img class="satellite counterClockwiseTurn" id="szat3" alt="satellite" src="./img/satellite.gif">						
+					</div>
+					<div id="mapWrap">
+						<img id="zoomMap" alt="hacker map" src="./img/map1.jpg">
+						<div id="mapPosition" class="blinking"></div>
+					</div>
+				</div>
+			</div>
+		</div></div>		
+		<div id="taskbar">		
+			<div id="startMenuButton">
+				<span>≡</span>&nbsp;开搞
+			</div>
+		<div class="taskbarPanel closed" id="minimPanel0" data-id="0"><span>?</span>有用的信息</div>
+		<div class="taskbarPanel closed" id="minimPanel1" data-id="1"><span>╩</span>主服务器</div>
+		<div class="taskbarPanel closed" id="minimPanel2" data-id="2"><span>B</span>比特币矿工</div>
+		<div class="taskbarPanel closed" id="minimPanel3" data-id="3"><span>◰</span>总部监视</div>
+		<div class="taskbarPanel closed" id="minimPanel4" data-id="4"><span>*|</span>密码破解器</div>
+		<div class="taskbarPanel closed" id="minimPanel5" data-id="5"><span>⊗</span>核电站</div>
+		<div class="taskbarPanel closed" id="minimPanel6" data-id="6"><span>╩</span>远程连接</div>
+		<!-- <div class="taskbarPanel closed" id="minimPanel7" data-id="7"><span>$</span>广告</div> -->
+		<div class="taskbarPanel closed" id="minimPanel8" data-id="8"><span>⇔</span>国际刑警组织数据库</div>
+		<div class="taskbarPanel closed" id="minimPanel9" data-id="9"><span>&gt;.</span>程序控制台</div></div>
+		<div id="startMenu">
+			<ul class="languagePicker">
+			
+			</ul>
+			<h1>黑客模拟器和黑客</h1>
+
+<h2>在线道德黑客模拟器</h2>
+
+<p>开始在你的键盘上输入随机文本来模拟你正在入侵一台电脑</p>
+			<p class="center"><a id="automateHacker" class="button">自动开始模拟攻击</a> <a id="toggleFullScreen" class="button">全&nbsp;屏</a></p>
+			<p>通过单击右侧的图标或按键盘上的数字来查找程序，以显示各种窗口.</p>
+			<img src="./img/geek-hacker-typer.jpg" alt="hacker typer">
+			<p class="center"><a id="howToUseToggle" class="button">阅读更多...</a></p>
+<div class="wrapFreestar"><!--ad--></div>
+			<p>通过这个黑客模拟游戏，我们希望提高对计算机和互联网的认识；安全。了解；更多关于道德白帽黑客 
+			<a title="Go to Wikipedia" href="https://en.wikipedia.org/wiki/White_hat_(computer_security)" target="_blank" rel="external nofollow">here</a>.</p>
+			<p><strong>Find more online pranks at <a href="https://pranx.com/">Pranx</a></strong></p>
+			<div class="wrapAd">
+			</div>
+			
+			<div id="prank_dab" style="display: none;"><div class="adBanner">.</div></div>
+		</div>		
+		<div id="icons">
+		<a class="openWindow closed" id="openWindow0" data-id="0"><span>?</span>有用的信息</a>
+		<a class="openWindow closed" id="openWindow1" data-id="1"><span>╩</span> 主服务器 </a>
+		<a class="openWindow closed" id="openWindow2" data-id="2"><span>B</span> 比特币矿工 </a>
+		<a class="openWindow closed" id="openWindow3" data-id="3"><span>◰</span>总部监视 </a>
+		<a class="openWindow closed" id="openWindow4" data-id="4"><span>*|</span>密码破解器</a>
+		<a class="openWindow closed" id="openWindow5" data-id="5"><span>⊗</span>核电站</a>
+		<a class="openWindow closed" id="openWindow6" data-id="6"><span>╩</span>远程连接</a>
+		<!-- <a class="openWindow closed" id="openWindow7" data-id="7"><span>$</span>广告</a> -->
+		<a class="openWindow closed" id="openWindow8" data-id="8"><span>⇔</span>国际刑警组织数据库</a>
+		<a class="openWindow closed" id="openWindow9" data-id="9"><span>&gt;.</span> 程序控制台 </a>
+		</div>
+		
+	</div>
+	<div id="wrapParticles">
+		<div id="particles-js">
+		<canvas class="particles-js-canvas-el" width="500" height="300" style="width: 100%; height: 100%;"></canvas></div>
+	</div>
+	<div id="languageBits">
+		<span>抱歉，您正在使用ad；阻滞剂</span>
+
+		<span>禁用AdBlock</span>
+
+		<span>怎么做</span>
+
+		<span>不匹配</span>
+
+		<span>成功</span>
+
+		<span>运行蛮力攻击</span>
+
+		<span>请等待解决方案</span>
+
+		<span>成功：找到管理员密码</span>
+
+		<span>密码</span>
+
+		<span>状态：待机</span>
+
+		<span>开始暴力攻击</span>
+
+		<span>定位</span>
+
+		<span>跟踪IP</span>
+
+		<span>找到的位置</span>
+
+		<span>跟踪SIM卡</span>
+
+		<span>最小化</span>
+
+		<span>最大化</span>
+
+		<span>关闭</span>
+		<span></span>
+	</div>
+	<script src="./js/particles.min.js"></script>
+	<script src="./js/hacker.js"></script>	
+   <script async="" src="./js/index.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-199423898-1');
+</script>
+
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+<div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>
+</body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b41d9d5edf000bc522732bf9166b733f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</html>
